@@ -8,8 +8,6 @@
 
 function encriptar(){
     var texto = document.getElementById("inputTexto").value.toLowerCase();
-    var texEnc = document.getElementById("texEnc").value;
-    var texDes = document.getElementById("texDes").value;
     // i es para que afecte tanto mayusculas como minusculas -- e else
     // g es para toda la linea u oracion
     //m es para que afecte a multiples lineas o parrafos
@@ -19,7 +17,7 @@ function encriptar(){
     var txtCifrado = txtCifrado.replace(/a/igm, "ai");
     var txtCifrado = txtCifrado.replace(/u/igm, "ufat");
                           
-   document.getElementById("texto").innerHTML = texEnc;
+   document.getElementById("texto").style.display = "none";
    document.getElementById("texto2").innerHTML = txtCifrado;
    document.getElementById("copiar").style.display = "show";
    document.getElementById("copiar").style.display = "inherit";
@@ -37,7 +35,7 @@ function desencriptar(){
     var txtCifrado = txtCifrado.replace(/ufat/igm, "u");
                           
    
-   document.getElementById("texto").innerHTML = texDes;
+   document.getElementById("texto").style.display = "none";
    document.getElementById("texto2").innerHTML = txtCifrado;
    document.getElementById("copiar").style.display = "show";
    document.getElementById("copiar").style.display = "inherit";
